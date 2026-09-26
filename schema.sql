@@ -37,17 +37,6 @@ CREATE TABLE rentals (
     FOREIGN KEY (vehicle_id) REFERENCES vehicles(id)
 ) DEFAULT CHARSET utf8;
 
-SELECT * FROM drivers;
-SELECT * FROM vehicles;
-
-INSERT INTO drivers (name, phone, vehicle_type)
-VALUES ('Kelvin Arcanjo', '+244943567154', 'Motorizada');
-
-INSERT INTO vehicles (disponibility, type, brand, model, color, status, price, rental_period )
-VALUES (TRUE , 'Motorizada' , 'Yango' , 'GS150' , 'Vermelho' , 'Boa' , 80000.00, 'Mensal');
-
-INSERT INTO rentals (driver_id, vehicle_id, start_date)
-VALUES (1, 1, '2026-09-25');
 
 
 
