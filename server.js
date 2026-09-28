@@ -1,4 +1,5 @@
-const express = require('express')
+const express = require('express');
+const connection = require('./db');
 
 const app = express();
 app.use(express.json());
@@ -20,8 +21,16 @@ app.post('/candidaturas' , (request , response) => {
         return;
     }
 
-    console.log(request.body);
-    response.status(201).send('Candidatura recebida com sucesso!');
+    const sql = 'INSERT INTO drivers (name , phone , vehicle_type) VALUES (? , ? , ?)' ;
+    connection.query(sql , [name , phone , vehicle_type] , (err , results) => {
+        if (err) {
+           console.log(err);
+           response.status(500).send('Erro ao guardar Cancdidatura.');
+           
+           return;
+        }
+        response.status(201).send('Candidatura guardada com sucesso na base de dados!');
+    })
 })
 
 app.listen(PORT, () => {
