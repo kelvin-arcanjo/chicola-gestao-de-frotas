@@ -35,6 +35,19 @@ app.post('/candidaturas' , async (request , response) => {
     }
 })
 
+app.get('/candidaturas', async (request, response) => {
+    try {
+        const connection = await dbPromise;
+        const sql = 'SELECT * FROM drivers';
+        const [resultados] = await connection.query(sql);
+        response.json(resultados); 
+
+    } catch (err) {
+        console.error(err);
+        response.status(500).send('Erro ao obter candidaturas da base de dados.');
+    }
+})
+
 app.listen(PORT, () => {
     console.log(`Servidor a correr em http://localhost:${PORT}`)
 })
