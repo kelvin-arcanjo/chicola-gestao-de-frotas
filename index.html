@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Candidatura Chicola.M</title>
+</head>
+<body>
+    <h1>Candidatura de Condutor - Chicola.M</h1>
+
+    <form id="formCandidatura">
+        <label for="name">Nome:</label> <br>
+        <input type="text" id="name" name="nome" required> <br>
+
+        <label for="phone">Telefone:</label> <br>
+        <input type="text" id="phone" name="telefone" required> <br>
+
+        <label for='vehicle_type'>Tipo de Veículo:</label> <br>
+        <select id="vehicle_type" name="veiculo" required>
+            <option value="Viatura">Viatura</option>
+            <option value="Motorizada">Motorizada</option>
+        </select> <br>
+
+        <button type="submit" id="btnSubmit">Submeter Candidatura</button>
+    </form>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
