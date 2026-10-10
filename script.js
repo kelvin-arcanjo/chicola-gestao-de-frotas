@@ -1,6 +1,7 @@
+const form = document.getElementById('formCandidatura');
 const btnSubmit = document.getElementById('btnSubmit');
 
-btnSubmit.addEventListener('click' , (event) => {
+btnSubmit.addEventListener('click' , async (event) => {
     event.preventDefault();
 
     // Process the form submission;
@@ -15,5 +16,31 @@ btnSubmit.addEventListener('click' , (event) => {
         return;
     }
 
-    alert('Candidatura Enviada com sucesso!');
+    try {
+        const response = await fetch('http://localhost:3000/candidaturas', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+
+            body: JSON.stringify({
+                name: inputName,
+                phone: inputPhone,
+                vehicle_type: vehicleType
+            })
+        });
+
+        if (response.ok){
+            alert('Candidatura Enviada com sucesso!');
+
+            form.reset();
+    
+        } else {
+            alert('Erro ao enviar candidatura. Por favor, tente novamente mais tarde.');
+        }
+
+    } catch (error) {
+        console.error('Erro ao enviar candidatura:', error);
+        alert('Não foi possível ligar ao servidor.');
+    }
 });
