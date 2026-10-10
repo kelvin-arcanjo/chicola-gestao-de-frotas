@@ -2,7 +2,7 @@ const corpoTabela = document.getElementById('corpoTabela');
 
 async function carregarCandidaturas() {
     try {
-        const response = await fetch('http://localhost:3000/candidaturas');
+        const response = await fetch('https://sistema-de-gestao-de-frotas-production.up.railway.app/candidaturas');
 
         if (!response.ok) {
             throw new Error('Erro ao obter candidaturas da base de dados.');

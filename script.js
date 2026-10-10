@@ -17,7 +17,7 @@ btnSubmit.addEventListener('click' , async (event) => {
     }
 
     try {
-        const response = await fetch('http://localhost:3000/candidaturas', {
+        const response = await fetch('https://sistema-de-gestao-de-frotas-production.up.railway.app/candidaturas', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
