@@ -51,5 +51,5 @@ app.get('/candidaturas', async (request, response) => {
 })
 
 app.listen(PORT, () => {
-    console.log(`Servidor a correr em http://localhost:${PORT}`)
+    console.log(`Servidor a correr em http://localhost:${PORT}`);
 })

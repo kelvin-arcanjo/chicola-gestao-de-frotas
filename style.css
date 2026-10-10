@@ -58,6 +58,15 @@ header h2 {
     text-align: left;
 }
 
+h1#h1dashboard {
+    font-family:'Times New Roman', Times, serif;
+    color: var(--cor-secundaria);
+    padding: 25px;
+    border:#f1eded00 3px solid;
+    border-radius: 8px;
+    font-size: 1.5rem;
+}
+
 h2#candidaturas {
     font-family:'Times New Roman', Times, serif;
     color: var(--cor-secundaria);
@@ -139,4 +148,85 @@ th, td {
 th {
     background-color: var(--cor-secundaria);
     color: var(--cor-branco);
+}
+
+footer {
+    background-color: var(--cor-primaria);
+    color: #ffffff;
+    padding: 50px 20px 20px 20px;
+    margin-top: 60px;
+    border-top: 3px solid  #1a1818;
+}
+
+.footer-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 35px;
+    text-align: left;
+    padding-bottom: 30px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-section h3 {
+    font-size: 1.1rem;
+    color: black;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+#brand-name {
+    width: 140px;
+    background-color: var(--cor-branco);
+    color: #242323;
+    padding: 5px 10px;
+    border-radius: 25px;
+}
+
+.footer-section p {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
+}
+
+.phone-numbers {
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.whatsapp-badge {
+    display: inline-block;
+    background: rgba(46, 125, 50, 0.2);
+    color: #4caf50;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border: 1px solid rgba(76, 175, 80, 0.3);
+}
+
+.sub-location {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.brand-slogan .slogan {
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: 8px;
+}
+
+.footer-dot {
+    color: var(--cor-primaria, #e53935);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: rgba(173, 166, 166, 0.76);
 }
